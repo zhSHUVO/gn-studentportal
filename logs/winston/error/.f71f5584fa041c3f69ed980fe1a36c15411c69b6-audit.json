@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/error/.f71f5584fa041c3f69ed980fe1a36c15411c69b6-audit.json",
+    "files": [
+        {
+            "date": 1685889011921,
+            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/error/2023-06-04-20-error.log",
+            "hash": "66d5906fc3dd3883496a847adb067e406826f51adaef7d38d3e0082ac636c25b"
+        },
+        {
+            "date": 1685891812145,
+            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/error/2023-06-04-21-error.log",
+            "hash": "97db92caa4cac55fd99c0859785bb1290ee3e870b45e7b4ae3304b18b68fdc57"
+        }
+    ],
+    "hashType": "sha256"
+}
