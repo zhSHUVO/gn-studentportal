@@ -1,6 +1,6 @@
 import { IGenericErrorMessage } from "./error";
 
-export type IGenericResonse = {
+export type IGenericErrorResonse = {
     statusCode: number;
     message: string;
     errorMessages: IGenericErrorMessage[];

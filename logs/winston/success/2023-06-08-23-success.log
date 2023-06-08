@@ -76,3 +76,9 @@
   label: 'gns_log',
   timestamp: '2023-06-08T17:41:21.760Z'
 }
+{
+  message: 'SIGTERN is received',
+  level: 'info',
+  label: 'gns_log',
+  timestamp: '2023-06-08T17:46:05.060Z'
+}
