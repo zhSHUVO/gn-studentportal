@@ -1,0 +1,30 @@
+{
+  message: '---->Database connected<----',
+  level: 'info',
+  label: 'gns_log',
+  timestamp: '2023-06-08T19:17:28.468Z'
+}
+{
+  message: '---->Server is listening on port 5000<----',
+  level: 'info',
+  label: 'gns_log',
+  timestamp: '2023-06-08T19:17:28.472Z'
+}
+{
+  message: 'SIGTERN is received',
+  level: 'info',
+  label: 'gns_log',
+  timestamp: '2023-06-08T19:20:31.706Z'
+}
+{
+  message: '---->Database connected<----',
+  level: 'info',
+  label: 'gns_log',
+  timestamp: '2023-06-08T19:21:00.765Z'
+}
+{
+  message: '---->Server is listening on port 5000<----',
+  level: 'info',
+  label: 'gns_log',
+  timestamp: '2023-06-08T19:21:00.768Z'
+}

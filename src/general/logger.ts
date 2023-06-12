@@ -2,7 +2,7 @@ import path from "path";
 import { createLogger, format, transports } from "winston";
 import DailyRotateFile from "winston-daily-rotate-file";
 
-const { combine, timestamp, label, printf, prettyPrint } = format;
+const { combine, timestamp, label, printf } = format;
 const loggerFormat = printf(({ level, message, label, timestamp }) => {
     const date = new Date(timestamp);
     const hour = date.toLocaleString("en-US", {
@@ -18,10 +18,10 @@ const loggerFormat = printf(({ level, message, label, timestamp }) => {
 const infoLogger = createLogger({
     level: "info",
     format: combine(
-        loggerFormat,
         label({ label: "gns_log" }),
         timestamp(),
-        prettyPrint()
+        loggerFormat
+        // prettyPrint()
     ),
     transports: [
         new transports.Console(),
@@ -39,15 +39,16 @@ const infoLogger = createLogger({
             maxFiles: "14d",
         }),
     ],
+    defaultMeta: { timestamp: new Date().toISOString() },
 });
 
 const errorLogger = createLogger({
     level: "info",
     format: combine(
-        loggerFormat,
         label({ label: "gns_log" }),
         timestamp(),
-        prettyPrint()
+        loggerFormat
+        // prettyPrint()
     ),
     transports: [
         new transports.Console(),
@@ -65,6 +66,7 @@ const errorLogger = createLogger({
             maxFiles: "14d",
         }),
     ],
+    defaultMeta: { timestamp: new Date().toISOString() },
 });
 
 export { infoLogger, errorLogger };
