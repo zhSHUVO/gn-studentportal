@@ -14,14 +14,12 @@ let server: Server;
 async function main() {
     try {
         await mongoose.connect(config.database_url as string);
+        infoLogger.info("Database connected");
         server = app.listen(config.port, () => {
-            infoLogger.info(
-                `---->Server is listening on port ${config.port}<----`
-            );
+            infoLogger.info(`Server is listening on port ${config.port}`);
         });
-        infoLogger.info("---->Database connected<----");
     } catch (error) {
-        errorLogger.error(`---->Database connection error, ${error}<----`);
+        errorLogger.error(`Database connection error, ${error}`);
     }
 
     process.on("unhandledRejection", error => {
@@ -37,9 +35,9 @@ async function main() {
 
 main();
 
-process.on("SIGTERM", () => {
-    infoLogger.info("SIGTERN is received");
-    if (server) {
-        server.close();
-    }
-});
+// process.on("SIGTERM", () => {
+//     infoLogger.info("SIGTERN is received");
+//     if (server) {
+//         server.close();
+//     }
+//     });

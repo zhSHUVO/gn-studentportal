@@ -3,8 +3,8 @@ import { ZodError } from "zod";
 import config from "../../config";
 import ApiError from "../../error/ApiError";
 import handleValidationError from "../../error/handleValidationError";
+import handleZodError from "../../error/handleZodError";
 import { errorLogger } from "../../general/logger";
-import handleZodError from "../../handleZodError";
 import { IGenericErrorMessage } from "../../interfaces/error";
 
 const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
