@@ -2,6 +2,7 @@ import { ErrorRequestHandler } from "express";
 import { ZodError } from "zod";
 import config from "../../config";
 import ApiError from "../../error/ApiError";
+import handleCastError from "../../error/handleCastError";
 import handleValidationError from "../../error/handleValidationError";
 import handleZodError from "../../error/handleZodError";
 import { errorLogger } from "../../general/logger";
@@ -23,6 +24,11 @@ const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
         errorMessages = simplifiedError.errorMessages;
     } else if (error instanceof ZodError) {
         const simplifiedError = handleZodError(error);
+        statusCode = simplifiedError.statusCode;
+        message = simplifiedError.message;
+        errorMessages = simplifiedError.errorMessages;
+    } else if (error?.name === "CastError") {
+        const simplifiedError = handleCastError(error);
         statusCode = simplifiedError.statusCode;
         message = simplifiedError.message;
         errorMessages = simplifiedError.errorMessages;
