@@ -31,3 +31,10 @@ export type AcademicSemesterModel = Model<IAcademicSemester>;
 export type IAcademicSemesterFilterSearch = {
     search?: string;
 };
+
+export const academicSemesterFilterableField = [
+    "search",
+    "title",
+    "code",
+    "year",
+];

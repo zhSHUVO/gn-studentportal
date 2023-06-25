@@ -40,3 +40,5 @@ export const academicSemesterTitleCodeMapper: {
 };
 
 export const paginationProperties = ["page", "limit", "sortBy", "sortOrder"];
+
+export const academicSemesterSearchableField = ["title", "code", "year"];
