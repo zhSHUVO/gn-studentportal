@@ -24,8 +24,10 @@ const createSemester = catchAsync(
 );
 
 const getAllSemester = catchAsync(async (req: Request, res: Response) => {
+    const filterSearch = selectProperties(req.query, ["search"]);
     const paginationOptions = selectProperties(req.query, paginationProperties);
     const paginationOutput = await AcademicSemesterService.getAllSemester(
+        filterSearch,
         paginationOptions
     );
     sendResponse<IAcademicSemester[]>(res, {

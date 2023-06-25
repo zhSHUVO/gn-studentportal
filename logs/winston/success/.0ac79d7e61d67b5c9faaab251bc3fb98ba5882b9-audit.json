@@ -6,61 +6,6 @@
     "auditLog": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/.0ac79d7e61d67b5c9faaab251bc3fb98ba5882b9-audit.json",
     "files": [
         {
-            "date": 1685889011919,
-            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-04-20-success.log",
-            "hash": "d5b0ebd635c2769d439f485c14dbaec6f725911fa81417e9e8f89f37ef7e78eb"
-        },
-        {
-            "date": 1685891812143,
-            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-04-21-success.log",
-            "hash": "41fae39037005272ec50846caf25796cfd9f2f09cf6004b3b5c1cb3ff5c5a2b8"
-        },
-        {
-            "date": 1685972315471,
-            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-05-19-success.log",
-            "hash": "888d0716798851b5be93cb705bb8f0f672b3d7fa4423081149b06a9e3e040afd"
-        },
-        {
-            "date": 1685973823992,
-            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-05-20-success.log",
-            "hash": "9a079bc44f5ced4fe462a9c5625d84aa52b4966e07be568afc38137447694e04"
-        },
-        {
-            "date": 1686160930903,
-            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-08-00-success.log",
-            "hash": "5275408476ff21a5068469d65143229f1bd9f0b6e69058ff617b507e15633fd9"
-        },
-        {
-            "date": 1686166126142,
-            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-08-01-success.log",
-            "hash": "2add487d3fc264d4b6e2fdfb4f730770608087d39355b0b4ab799720decded3f"
-        },
-        {
-            "date": 1686245723182,
-            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-08-23-success.log",
-            "hash": "6c40e6dd49c13deac054cde40f9a86f1f26be4d5ea7ef1be16a3645593f5ada5"
-        },
-        {
-            "date": 1686248039654,
-            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-09-00-success.log",
-            "hash": "33723c6ae71d24ad1dd1e30e3f910b28083e08191a80f1c3c5915842cf2ddd97"
-        },
-        {
-            "date": 1686251847497,
-            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-09-01-success.log",
-            "hash": "92f63756b78b318f4705354e3b4f34d101b3983fd8eae771ebe3f89579cd9d91"
-        },
-        {
-            "date": 1686322041403,
-            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-09-20-success.log",
-            "hash": "f65e3b56874c3e8be8324b5b74cd24e9ab0b00e83cfc67ff94afc39dd67a9d87"
-        },
-        {
-            "date": 1686324062226,
-            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-09-21-success.log",
-            "hash": "dc4a2554907eecc4000b5dd03724c6d7dc1adeda5eda55a2267c6afead4ff540"
-        },
-        {
             "date": 1686576734389,
             "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-12-19-success.log",
             "hash": "d30c90fe51747e7e7ce22c3e647aa680997f2a057409d09e353c79169c81e95e"
@@ -94,6 +39,31 @@
             "date": 1686843297761,
             "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-15-21-success.log",
             "hash": "1817cff978c1027c446911c5bc506b6ad9cb7211a844fe21774b1155b4b3b6b7"
+        },
+        {
+            "date": 1686891455412,
+            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-16-10-success.log",
+            "hash": "0f0872b8c9a3932ed1ba817fe747da4cad6b58a9828e6f8cb40dc2c70444d3cd"
+        },
+        {
+            "date": 1686891606701,
+            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-16-11-success.log",
+            "hash": "881bb28660dfda6dc8de7b1b8dc29a86a622baae2b223a20a638f2242aecf651"
+        },
+        {
+            "date": 1687101295297,
+            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-18-21-success.log",
+            "hash": "20c261955012d826274adaf31fc7c6b2ecc2337f4b6bbb1f67aa213075f9fc5a"
+        },
+        {
+            "date": 1687673198405,
+            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-25-12-success.log",
+            "hash": "75fa70c4cf3c74e92d3b34c0378d8f0ce06a4fd5d5447ea18cd8f134ef428bdf"
+        },
+        {
+            "date": 1687676608416,
+            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-25-13-success.log",
+            "hash": "21dbc536cf88040fcd8836ca1d46f43cc80db5d32a326b71aa85dfb73ca9e1ff"
         }
     ],
     "hashType": "sha256"
