@@ -30,10 +30,10 @@ const getAllSemester = async (
 ): Promise<IGenericResponse<IAcademicSemester[]>> => {
     const { search, ...filter } = filterSearch;
 
-    const andConditions = [];
+    const queryConditions = [];
 
     if (search) {
-        andConditions.push({
+        queryConditions.push({
             $or: academicSemesterSearchableField.map(field => ({
                 [field]: {
                     $regex: search,
@@ -44,7 +44,7 @@ const getAllSemester = async (
     }
 
     if (Object.keys(filter).length) {
-        andConditions.push({
+        queryConditions.push({
             $and: Object.entries(filter).map(([field, value]) => ({
                 [field]: value,
             })),
@@ -55,11 +55,15 @@ const getAllSemester = async (
         paginationHelpers.calculatePagination(paginationOptions);
 
     const sortFormats: { [key: string]: SortOrder } = {};
+
     if (sortBy && sortOrder) {
         sortFormats[sortBy] = sortOrder;
     }
 
-    const selectedPage = await AcademicSemester.find({ $and: andConditions })
+    const queryParameters =
+        queryConditions.length > 0 ? { $and: queryConditions } : {};
+
+    const selectedPage = await AcademicSemester.find(queryParameters)
         .sort(sortFormats)
         .skip(skipPages)
         .limit(limit);
@@ -76,7 +80,15 @@ const getAllSemester = async (
     };
 };
 
+const getSingleSemester = async (
+    id: string
+): Promise<IAcademicSemester | null> => {
+    const semester = await AcademicSemester.findById(id);
+    return semester;
+};
+
 export const AcademicSemesterService = {
     createSemester,
     getAllSemester,
+    getSingleSemester,
 };
