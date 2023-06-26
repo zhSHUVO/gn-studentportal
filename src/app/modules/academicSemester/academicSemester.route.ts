@@ -7,6 +7,12 @@ const router = express.Router();
 
 router.get("/:id", AcademicSemesterController.getSingleSemester);
 
+router.patch(
+    "/:id",
+    validateReq(AcademicSemesterValidation.updateAcademicSemesterZodSchema),
+    AcademicSemesterController.updateSemester
+);
+
 router.get("/", AcademicSemesterController.getAllSemester);
 
 router.post(

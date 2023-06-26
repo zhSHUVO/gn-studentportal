@@ -74,6 +74,16 @@
             "date": 1687719626912,
             "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-26-01-success.log",
             "hash": "a859d5dfdb581c3f918a420a7849fd202ebde8d952f7cc272b17e3de80aa053c"
+        },
+        {
+            "date": 1687761268397,
+            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-26-12-success.log",
+            "hash": "9cf5a75a60313bb1eb8cc420d1df54336634e6f2e5327011f643c19523af89a1"
+        },
+        {
+            "date": 1687762805423,
+            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-26-13-success.log",
+            "hash": "61c84be18bc37ddc50e38407ac83813b5488c753fc336c03339f04cc1cfe180f"
         }
     ],
     "hashType": "sha256"
