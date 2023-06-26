@@ -6,11 +6,6 @@
     "auditLog": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/error/.f71f5584fa041c3f69ed980fe1a36c15411c69b6-audit.json",
     "files": [
         {
-            "date": 1686578833174,
-            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/error/2023-06-12-20-error.log",
-            "hash": "309980fd9828419d9cdf3e1d385de8325c8f7c9ced325e21a65820366e65ee55"
-        },
-        {
             "date": 1686671613414,
             "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/error/2023-06-13-21-error.log",
             "hash": "44c5f4f6cfd0af8b2ecda921001b4c0f00f23101cf321e473f54757b0bd83fa8"
@@ -84,6 +79,11 @@
             "date": 1687788265210,
             "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/error/2023-06-26-20-error.log",
             "hash": "567beaeb178bf4959f632fd68c03754f47e53faf23679491b61faba64b1c0fcf"
+        },
+        {
+            "date": 1687791924726,
+            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/error/2023-06-26-21-error.log",
+            "hash": "0a8b9bdd6e5302c4ae26b95c188bb6fcd60202e1297a33e910787ebd5b1ae3de"
         }
     ],
     "hashType": "sha256"

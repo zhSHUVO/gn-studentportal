@@ -3,12 +3,13 @@ import httpStatus from "http-status";
 import catchAsync from "../../../general/catchAsync";
 import selectProperties from "../../../general/selectProperties";
 import sendResponse from "../../../general/sendResponse";
-import { paginationProperties } from "./academicSemester.constant";
+
 import {
     IAcademicSemester,
     academicSemesterFilterableField,
 } from "./academicSemester.interface";
 import { AcademicSemesterService } from "./academicSemester.service";
+import { paginationProperties } from "../../../general/pagination";
 
 const createSemester = catchAsync(async (req: Request, res: Response) => {
     const { ...academicSemesterData } = req.body;
