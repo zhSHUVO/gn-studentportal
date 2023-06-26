@@ -1,5 +1,5 @@
 import cors from "cors";
-import express, { Application, NextFunction, Request, Response } from "express";
+import express, { Application, Request, Response } from "express";
 import httpStatus from "http-status";
 import globalErrorHandler from "./app/middlewares/globalErrorHandler";
 import apiRoutes from "./app/routes";
@@ -18,7 +18,8 @@ app.use("/api/v1", apiRoutes);
 // });
 
 app.use(globalErrorHandler);
-app.use((req: Request, res: Response, next: NextFunction) => {
+
+app.use((req: Request, res: Response) => {
     res.status(httpStatus.NOT_FOUND).json({
         operation: "Failed",
         message: "Invalid route",
@@ -29,7 +30,6 @@ app.use((req: Request, res: Response, next: NextFunction) => {
             },
         ],
     });
-    next();
 });
 
 export default app;
