@@ -89,6 +89,11 @@
             "date": 1687795667449,
             "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-26-22-success.log",
             "hash": "0b54a1ea5afe91bdfca5ad06ba73047ce8dd923668148c5ad191fc8e69dd127f"
+        },
+        {
+            "date": 1687803168969,
+            "name": "/home/shadow/Dev/gn-studentportal/auth-service/logs/winston/success/2023-06-27-00-success.log",
+            "hash": "8f9c8c700c96683ea58c54b3b8d820e4b496a65bc6b106688f2a42c4d2acca15"
         }
     ],
     "hashType": "sha256"
