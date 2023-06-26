@@ -1,4 +1,12 @@
-import { IAcademicFaculty } from "./academicFaculty.interface";
+import { SortOrder } from "mongoose";
+import { paginationHelpers } from "../../../helpers/paginationHelper";
+import { IGenericResponse } from "../../../interfaces/common";
+import { IPaginationOptions } from "../../../interfaces/pagination";
+import { academicFacultySearchableFields } from "./academicFaculty.constant";
+import {
+    IAcademicFaculty,
+    IAcademicFacultyFilterSearch,
+} from "./academicFaculty.interface";
 import { AcademicFaculty } from "./academicFaculty.model";
 
 const createFaculty = async (
@@ -8,6 +16,63 @@ const createFaculty = async (
     return newFaculty;
 };
 
+const getAllFaculty = async (
+    filterSearch: IAcademicFacultyFilterSearch,
+    paginationOptions: IPaginationOptions
+): Promise<IGenericResponse<IAcademicFaculty[]>> => {
+    const { search, ...filter } = filterSearch;
+
+    const queryConditions = [];
+
+    if (search) {
+        queryConditions.push({
+            $or: academicFacultySearchableFields.map(field => ({
+                [field]: {
+                    $regex: search,
+                    $options: "i",
+                },
+            })),
+        });
+    }
+
+    if (Object.keys(filter).length) {
+        queryConditions.push({
+            $and: Object.entries(filter).map(([field, value]) => ({
+                [field]: value,
+            })),
+        });
+    }
+
+    const { page, limit, skipPages, sortBy, sortOrder } =
+        paginationHelpers.calculatePagination(paginationOptions);
+
+    const sortFormats: { [key: string]: SortOrder } = {};
+
+    if (sortBy && sortOrder) {
+        sortFormats[sortBy] = sortOrder;
+    }
+
+    const queryParameters =
+        queryConditions.length > 0 ? { $and: queryConditions } : {};
+
+    const selectedPage = await AcademicFaculty.find(queryParameters)
+        .sort(sortFormats)
+        .skip(skipPages)
+        .limit(limit);
+
+    const documentCount = await AcademicFaculty.countDocuments();
+
+    return {
+        data: selectedPage,
+        meta: {
+            page,
+            limit,
+            documentCount,
+        },
+    };
+};
+
 export const AcademicFacultyService = {
     createFaculty,
+    getAllFaculty,
 };
