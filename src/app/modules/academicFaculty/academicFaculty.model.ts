@@ -16,6 +16,7 @@ const academicFacultySchema = new Schema<
         },
     },
     {
+        collection: "faculties",
         timestamps: true,
         toJSON: {
             virtuals: true,
