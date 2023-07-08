@@ -16,7 +16,7 @@ const createFaculty = catchAsync(async (req: Request, res: Response) => {
     sendResponse<IAcademicFaculty>(res, {
         statusCode: httpStatus.OK,
         operation: "Successful",
-        message: "Semester created successfully",
+        message: "Faculty created successfully",
         data: newFaculty,
     });
 });
